@@ -14,18 +14,16 @@ getCharacters(data => {
 
     data.results.forEach(personajes => {
 
-        const article = document.createRange().createContextualFragment(/*html*/`
-            <article>
-
-            <div class="image-container">
-                <img src="${personajes.image}" alt="PersonajeS">
-            </div>
-
-            <h2>${personajes.name}</h2>
-            <span>${personajes.status}</span>
-
-        </article>
+        const article = document.createRange().createContextualFragment(`
+    <article>
+        <div class="image-container">
+            <img src="${personajes.image}" alt="PersonajeS">
+        </div>
+        <h2>${personajes.name}</h2>
+        <span>${personajes.status}</span>
+    </article>
 `);
+
 
         const main = document.querySelector('main');
 
@@ -33,4 +31,10 @@ getCharacters(data => {
     });
 
         
+});
+
+const btn = document.getElementById("darkModeBtn");
+
+btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
 });

@@ -202,3 +202,103 @@ span[data-status="Dead"] {
 span[data-status="unknown"] {
     color: #6b6b6b;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 20px;
+}
+
+header h1 {
+    margin: 0 auto;
+}
+
+#darkModeBtn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+#darkModeBtn:hover {
+    background: #00ff99;
+    color: #000;
+}
+
+.dark-mode {
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background: #111;
+}
+
+.dark-mode article {
+    background: #222;
+    color: white;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.dark-mode article h2 {
+    color: #ffffff;
+}
+
+.dark-mode article span {
+    color: #ffffff;
+}
+
+.dark-mode header h1 {
+    color: white !important;
+    text-shadow: 0 0 10px #00ffbf, 0 0 20px #00ffbf;
+}
+
+.switch {
+    position: absolute;
+    right: 40px;     
+    top: 50px;       
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #cfcfcf;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+
+input:checked + .slider {
+    background-color: #00ff99;
+}
+
+input:checked + .slider:before {
+    transform: translateX(27px);
+}
