@@ -2,6 +2,9 @@
 
 Este es un proyecto sencillo que consume la **API de Rick and Morty** y muestra los personajes en formato de cartas con estilos personalizados.
 
+## Link pagina desplegada
+https://daniusfts1.github.io/ProyectoIntegradorDev/
+
 ## 🚀 Tecnologías utilizadas
 
 * **HTML5**
